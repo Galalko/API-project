@@ -2,21 +2,23 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+body {
 }
 html {
+  box-sizing: border-box;
   font-size: 15px;
 }
 h2 {
   color: azure;
-  font-family: "Architects Daughter", cursive;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 section {
+  background-image: url(./pexels-lukas-616404.jpg);
+  display: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -32,7 +34,7 @@ section {
   margin: 0 auto;
 }
 .brand-logo {
-  color: aliceblue;
+  color: rgb(11, 108, 192);
   margin-bottom: 25px;
   text-align: center;
   font-size: 4rem;
@@ -67,4 +69,172 @@ form ion-icon {
   grid-gap: 25px;
   grid-template-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+  margin-bottom: 50px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(19, 14, 14, 0.4);
+  height: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item .img {
+  width: 95%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+
+  /* padding: 20px; */
+}
+.view-button {
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(26, 53, 26, 0.6);
+  text-align: center;
+  justify-content: center;
+  width: 120px;
+  height: 30px;
+  padding: 10px 0;
+  color: white;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.item p {
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.empty-input,
+.wrong-input,
+.Api-error {
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(236, 18, 18, 0.7);
+  font-weight: bold;
+}
+/* popup */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.item-data {
+  align-items: center;
+  justify-content: center;
+  background-color: #288162;
+  height: 30px;
+  width: 130px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  /* background-color: white; */
+  width: 700px;
+  max-width: 80%;
+  height: 800px;
+  font-size: 1.45rem;
+  font-weight: bold;
+  background-image: url(./pexels-karolina-grabowska-4199062.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  will-change: transform;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

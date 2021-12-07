@@ -1,0 +1,20 @@
+{
+  "name": "api-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galalko/API-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Galalko/API-project/issues"
+  },
+  "homepage": "https://github.com/Galalko/API-project#readme",
+  "type": "module"
+}

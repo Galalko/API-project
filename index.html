@@ -3,49 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=<se>, initial-scale=1.0" />
-    <title>MY API APP</title>
+    <meta name="viewport" content="width= 1, initial-scale=1.0" />
+    <title>YOUR SPOON</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div hidden id="spinner"></div>
     <section>
       <div class="container">
-        <h1 class="brand-logo">My API app</h1>
+        <h1 class="brand-logo">YOUR SPOON</h1>
         <form>
-          <input type="text" placeholder="More about your future car .." />
-          <ion-icon name="search"></ion-icon>
+          <input id="search-value" type="text" placeholder="Find your yummy dish .." />
+          <ion-icon id="icon" name="search"></ion-icon>
         </form>
         <div class="search-result">
-          <div class="item">
-            <img src="./car.jpg" alt="empty" />
+           <!-- <div class="item">
+            <img class="img" src="./car.jpg" alt="empty" />
             <div class="flex-container">
-              <h2 class="title">The car model</h2>
-              <a href="#">View the Car</a>
+              <h2 class="title">The recipe</h2>
+              <a class="view-button" href="#">View the recipe</a>
             </div>
-            <p class="item-data">speed : 250 KM/h</p>
-          </div>
-          <div class="item">
-            <img src="./car.jpg" alt="empty" />
-            <div class="flex-container">
-              <h2 class="title">The car model</h2>
-              <a href="#">View the Car</a>
-            </div>
-            <p class="item-data">speed : 250 KM/h</p>
-          </div>
-          <div class="item">
-            <img src="./car.jpg" alt="empty" />
-            <div class="flex-container">
-              <h2 class="title">The car model</h2>
-              <a href="#">View the Car</a>
-            </div>
-            <p class="item-data">speed : 250 KM/h</p>
-          </div>
-        </div>
+            <p class="item-data">Recipe ingredients</p>
+          </div> -->
+          
       </div>
+      
     </section>
+   
+   
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Ingredients</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+    <div id="overlay"></div>
+</div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
